@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="/public/dist/css/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="bg-hero">
+        <div class="container mx-auto">
+            <div class="max-w-[35%] space-y-5 py-10">
+                <h1 class="text-5xl font-semibold font-Archivo">Crie e compartilhe se evento.</h1>
+                <p class="text-lg text-[#2bccde]">O primeiro passo, é preencher esse formulário de inscrição.</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container mx-auto">
+            <div class="bg-[#FAFAFC] rounded-t-lg p-10">
+                <form id="send" action="" class="space-y-10">
+                    <fieldset>
+                        <legend class="text-xl font-semibold mb-5 font-Archivo">Informações do Evento</legend>
+                        <hr>
+                        <div class="grid gap-2 my-5">
+                            <label for="title-event">Titulo do Evento
+                                <span class="text-[#717171] text-sm ml-2">(minimo 8 caracteres)</span>
+                            </label>
+                            <input 
+                                class="bg-[#FAFAFC] text-sm text-[#717171] font-Poppinsbox-border outline-none border rounded-lg px-4 py-2 border-inherit invalid:border-red-600"
+                                type="text" name="title-event" id="title-event" minlength="8" required>
+                        </div>
+
+                        <div class="grid gap-2 my-5">
+                            <label for="link-event">Link do Evento
+                                <span class="text-[#717171] text-sm ml-2">(comece com https://)</span>
+                            </label>
+                            <input
+                                class="bg-[#FAFAFC] text-sm text-[#717171] font-Poppins box-border outline-none border rounded-lg px-4 py-2"
+                                type="text" name="link-event" id="link-event">
+                        </div>
+
+                        <div class="grid gap-2 my-5">
+                            <label for="whats-event">WhatsApp para Contato
+                                <span class="text-[#717171] text-sm ml-2">(somente números)</span>
+                            </label>
+                            <input
+                                class="bg-[#FAFAFC] text-sm text-[#717171] font-Poppins box-border outline-none border rounded-lg px-4 py-2"
+                                type="text" name="whats-event" id="whats-event">
+                        </div>
+
+                        <div class="grid gap-2 my-5">
+                            <label for="info-event">Informações Extras</label>
+                            <textarea
+                                class="bg-[#FAFAFC] text-sm text-[#717171] h-40 font-Poppins box-border outline-none border rounded-lg px-4 py-2"
+                                type="text" name="info-event" id="info-event"></textarea>
+                        </div>
+
+                        <div class="grid gap-2 my-5">
+                            <label for="category">Categoria</label>
+                            <select name="category" id="category"
+                                class="bg-[#FAFAFC] text-sm select-ico appearance-none text-[#717171] font-Poppins box-border outline-none border rounded-lg px-4 py-2">
+                                <option selected disabled>Tipo de evento</option>
+                                <option value="live">Live</option>
+                                <option value="podcast">Podcast</option>
+                                <option value="stream">Stream</option>
+                                <option value="mentorship">Mentoria</option>
+                            </select>
+                        </div>
+
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="text-xl font-semibold mb-5 font-Archivo">Privacidade</legend>
+                        <hr>
+                        <div class="grid gap-2 my-5">
+                            <label for="email">E-mail do administrador
+                                <span class="text-[#717171] text-sm ml-2">(digite um email válido)</span>
+                            </label>
+                            <input
+                                class="bg-[#FAFAFC] text-sm text-[#717171] font-Poppinsbox-border outline-none border rounded-lg px-4 py-2"
+                                type="email" name="email" id="email">
+                        </div>
+
+                        <div class="grid gap-2 my-5">
+                            <label for="password">Senha de acesso para os participantes
+                                <span class="text-[#717171] text-sm ml-2">(mínimo 8 caracteres)</span>
+                            </label>
+                            <input
+                                class="bg-[#FAFAFC] text-sm text-[#717171] font-Poppinsbox-border outline-none border rounded-lg px-4 py-2"
+                                type="password" name="password" id="password" minlength="8" required>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <input class="absolute w-6 h-6 input-chk opacity-0" type="checkbox" name="private-event"
+                                id="private-event">
+                            <label
+                                class="flex label-chk gap-3 before:content-[''] before:w-6 before:h-6 before:border before:rounded-lg before:block"
+                                for="private-event">Evento privado</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="text-xl font-semibold mb-5 font-Archivo">Dia e Hora</legend>
+                        <hr>
+                        <div class="flex gap-5">
+                            <div class="grid gap-2 my-5 w-[60%]">
+                                <label for="data">Data</label>
+                                <input
+                                    class="bg-[#FAFAFC] text-sm appearance-none text-[#717171] font-Poppinsbox-border outline-none border rounded-lg px-4 py-2"
+                                    type="date" name="data" id="data">
+                            </div>
+
+                            <div class="grid gap-2 my-5 w-[20%]">
+                                <label for="initial">Das</label>
+                                <input placeholder="19:00"
+                                    class="bg-[#FAFAFC] text-sm text-[#717171] font-Poppinsbox-border outline-none border rounded-lg px-4 py-2"
+                                    type="time" name="initial" id="initial">
+                            </div>
+
+                            <div class="grid gap-2 my-5 w-[20%]">
+                                <label for="finish">Até</label>
+                                <input placeholder="20:00"
+                                    class="bg-[#FAFAFC] text-sm text-[#717171] font-Poppinsbox-border outline-none border rounded-lg px-4 py-2"
+                                    type="time" name="finish" id="finish">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="border-t ">
+        <div class="bg-[#F0F0F4] container mx-auto p-10 mb-10 rounded-b-lg">
+            <div class="flex flex-col">
+                <button form="send"
+                    class="bg-[#04D361] rounded p-4 font-medium text-white hover:bg-[#08a04c] transition hover:duration-700 ">Salvar Evento</button>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
